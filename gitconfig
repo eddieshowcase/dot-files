@@ -1,0 +1,31 @@
+[user]
+	name = Ian Erickson
+	email = eddieshowcase@gmail.com 
+[http]
+	sslVerify = false
+[color]
+	ui = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://"]
+	insteadOf = git://
+[alias]
+	##################
+	# In Use #
+	##################
+	# Commit all changes
+	ca = !git add --all && git commit -av
+	# Commit all and amend to last commit
+	caa = commit --all --amend -C HEAD
+	# commit staged and amend to last commit
+	csa = commit --amend -C HEAD
+	# commit with fixup
+	caf = commit --all --fixup HEAD
+	# Checkout
+	co = checkout
+	cod = checkout develop
+	# add basic color to git log and limit to 10
+	lg = log --decorate -n 10
+	rub = "!rub() { git remote update $1 --prune;};rub"
+[core]
+	editor = gedit
