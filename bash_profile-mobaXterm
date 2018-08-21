@@ -75,30 +75,6 @@ unset color_prompt force_color_prompt
 ###################################################################
 #### CUSTOM STUFF HERE:
 
-#### Customize bash shell prompt:
-# Define Some Colors:
-        # 0 = thin 1 = thick
-        #Black 30       #Dark Gray 30   #Blue 34        #Green 32
-        #Cyan 36        #Red 31         #Purple 35      #Brown 33
-        #Yellow 33      #White 37
-# Yellow:
-#COLOR1="\[\033[0;33m\]"
-# Green:
-#COLOR2="\[\033[0;31m\]"
-# Cyan:
-#COLOR3="\[\033[0;36m\]"
-# Gray:
-#COLOR4="\[\033[0;37m\]"
-
-#PS1="$COLOR4[$COLOR2\u$COLOR4 @ $COLOR2\h$COLOR2:$COLOR3\W$COLOR4] $COLOR4"
-#PS1="\[\033[0;37m\][\[\033[0;31m\]\u\[\033[0;37m\] @ \[\003[0;33m\]\h\[\003[0;31m\]:\[\003[0;36m\]\W\[\003[0;37m\]] \[\003[0;37m\]"
-
-# From bashrcgenerator.com:
-#PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\W\[\e[0m\]\[\e[00;37m\]]\[\e[0m\] "
-
-# MobaXterm Default, two line nice:
-#PS1="\[\033]0;$PWD\007\] \[\033[33m\][\D{%Y-%m-%d %H:%M.%S}]\[\033[0m\] \[\033[35m\]\w\[\033[0m\] \[\033[36m\][\u.\h]\[\033[0m\] \[\033(0\]b\[\033(B\]"
-
 # aliases
 alias rm='rm -i'
 alias cp='cp -i'
@@ -148,6 +124,34 @@ export SSH_ASKPASS="C:\Program Files\Git\mingw64\libexec\git-core\git-gui--askpa
 # PATH ENV
 #export PATH=$PATH:$M2_HOME/bin:$NODE_HOME:$NPM_HOME
 #export PATH=$PATH:$M2_HOME/bin
+
+## Customize bash shell prompt:
+# Define Some Colors:
+        # 0 = thin 1 = thick
+        #Black 30       #Dark Gray 30   #Blue 34        #Green 32
+        #Cyan 36        #Red 31         #Purple 35      #Brown 33
+        #Yellow 33      #White 37
+# Yellow:
+#COLOR1="\[\033[0;33m\]"
+# Green:
+#COLOR2="\[\033[0;31m\]"
+# Cyan:
+#COLOR3="\[\033[0;36m\]"
+# Gray:
+#COLOR4="\[\033[0;37m\]"
+
+#PS1="$COLOR4[$COLOR2\u$COLOR4 @ $COLOR2\h$COLOR2:$COLOR3\W$COLOR4] $COLOR4"
+#PS1="\[\033[0;37m\][\[\033[0;31m\]\u\[\033[0;37m\] @ \[\003[0;33m\]\h\[\003[0;31m\]:\[\003[0;36m\]\W\[\003[0;37m\]] \[\003[0;37m\]"
+
+# From bashrcgenerator.com:
+#PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[00;31m\]\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;36m\]\W\[\e[0m\]\[\e[00;37m\]]\[\e[0m\] "
+
+# MobaXterm Default, two line nice:
+#PS1="\[\033]0;$PWD\007\] \[\033[33m\][\D{%Y-%m-%d %H:%M.%S}]\[\033[0m\] \[\033[35m\]\w\[\033[0m\] \[\033[36m\][\u.\h]\[\033[0m\] \[\033(0\]b\[\033(B\]"
+PS1="\[\033]0;$PWD\007\] \[\033[35m\]\w\[\033[0m\] \[\033[36m\][\u.\h]\[\033[0m\]$(__git_ps1 " (%s)")\n\[\033(0\]b\[\033(B\] "
+
+# Default from git-prompt.sh
+#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 
 ######################################################################
