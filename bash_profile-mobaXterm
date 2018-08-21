@@ -134,6 +134,13 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+### GIT stuff on Windows
+# For Git windows ssh key matching: needed to expose this from the Git-bash env to my mobaXterm env
+export SSH_ASKPASS="C:\Program Files\Git\mingw64\libexec\git-core\git-gui--askpass"
+# 'git log' (issue with busybox less), I did apt-get install less to get the 'real' less, and then...
+#export GIT_PAGER='/bin/less -R'
+#alias db='echo "sourcing my bashrc..."; source ~/.bashrc'
+
 #export MAVEN_HOME=/drives/e/apps/apache-maven-3.3.3
 #export M2_HOME=/drives/e/apps/apache-maven-3.3.3
 #export JAVA_HOME=/drives/c/Program\ Files/Java/jdk1.7.0_67
