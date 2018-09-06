@@ -2,7 +2,7 @@
 	name = Ian Erickson
 	email = eddieshowcase@gmail.com 
 [http]
-	sslVerify = false
+	#sslVerify = false
 [color]
 	ui = true
 [url "https://github.com/"]
@@ -28,4 +28,4 @@
 	lg = log --decorate -n 10
 	rub = "!rub() { git remote update $1 --prune;};rub"
 [core]
-	editor = gedit
+	editor = subl
